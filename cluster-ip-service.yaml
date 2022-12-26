@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: nginx-cluster-ip
+
+
+spec: 
+  type: ClusterIp
+  selector:
+    label-name-1: pod1
+  ports:
+    - port: 8080
+      targetPort: 80

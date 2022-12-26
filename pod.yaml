@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-first-web
+  labels:
+    label-name-1: pod1
+    
+spec:
+  containers:
+    - name: nginx-container
+      image: mostafashaheen123/nginximage
+      ports: 
+        - containerport: 80
+      imagePullPolicy: IfNotPresent
+      
